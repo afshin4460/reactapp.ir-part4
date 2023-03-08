@@ -3,6 +3,7 @@ import './App.css';
 import Students from './components/students/students';
 import Button from './components/ui/button/button';
 import NewStudent from './components/students/student/newStudent/newStudents';
+import Toolbar from './containers/header/toolbar/toolbar';
 
 function App() {
     const [studentsState, setStudents] = useState([
@@ -85,6 +86,7 @@ function App() {
     };
     return (
         <div className='App'>
+            <Toolbar />
             <NewStudent
                 studentName={studentName}
                 studentClass={studentClass}
