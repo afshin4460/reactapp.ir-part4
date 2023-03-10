@@ -1,12 +1,15 @@
 import React from 'react';
 import './toolbar.css';
 import Logo from '../../../components/logo/logo';
+import MenuItems from '../menuItems/menuItems';
 
 function Toolbar() {
     return (
         <header className="toolbar">
             <Logo />
-            <nav>navbar</nav>
+            <nav>
+                <MenuItems />
+            </nav>
             <button>login</button>
         </header>
     );
