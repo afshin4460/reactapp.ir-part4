@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './toolbar.css';
 import Logo from '../../../components/logo/logo';
 import MenuItems from '../menuItems/menuItems';
@@ -7,16 +7,22 @@ import Modal from '../../../components/ui/modal/modal';
 import SignIn from '../../../components/user/signin/signin';
 
 function Toolbar() {
+    
+    const [showModal, setShowModal] = useState(false);
+    const handleModal = () => {
+        setShowModal(!showModal);
+    };
+
     return (
         <header className="toolbar">
             <Logo />
             <nav>
                 <MenuItems />
             </nav>
-            <Button btnType='violet' clicked={() => alert('logIn')}>ورود یا ثبت نام</Button>
-            <Modal>
-                <SignIn />
-            </Modal>
+            <Button btnType='violet' clicked={handleModal}>ورود یا ثبت نام</Button>
+            {
+                showModal ? <Modal><SignIn /></Modal> : null
+            }
         </header>
     );
 }
