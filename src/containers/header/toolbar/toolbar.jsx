@@ -20,9 +20,7 @@ function Toolbar() {
                 <MenuItems />
             </nav>
             <Button btnType='violet' clicked={handleModal}>ورود یا ثبت نام</Button>
-            {
-                showModal ? <Modal><SignIn /></Modal> : null
-            }
+            <Modal show={showModal}><SignIn /></Modal>
         </header>
     );
 }
