@@ -12,6 +12,9 @@ function Button(props) {
         case 'success':
             classes.push('Success');
             break;
+        case 'violet':
+            classes.push('Violet');
+            break;
         default:
             break;
     }
