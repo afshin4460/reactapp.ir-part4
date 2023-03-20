@@ -2,21 +2,11 @@ import React from 'react';
 import './modal.css';
 
 function Modal(props) {
-
-    const classes = ['modal'];
-    switch (props.show) {
-        case true:
-            classes.push('showModal');
-            break;
-        case false:
-            classes.push('hideModal');
-            break;
-        default:
-            break;
-    }
-
     return(
-        <div className={classes.join(' ')}>{props.children}</div>
+        <div className="modal" style={{
+            transform: props.show ? 'translateX(0)' : 'translateX(-100vw)',
+            opacity: props.show ? '1' : '0'
+        }}>{props.children}</div>
     );
 }
 
