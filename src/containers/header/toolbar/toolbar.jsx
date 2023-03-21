@@ -10,7 +10,10 @@ function Toolbar() {
     
     const [showModal, setShowModal] = useState(false);
     const handleModal = () => {
-        setShowModal(!showModal);
+        setShowModal(true);
+    };
+    const handleModalClosed = () => {
+        setShowModal(false);
     };
 
     return (
@@ -20,7 +23,7 @@ function Toolbar() {
                 <MenuItems />
             </nav>
             <Button btnType='violet' clicked={handleModal}>ورود یا ثبت نام</Button>
-            <Modal show={showModal}><SignIn /></Modal>
+            <Modal show={showModal} modalClosed={handleModalClosed}><SignIn /></Modal>
         </header>
     );
 }
