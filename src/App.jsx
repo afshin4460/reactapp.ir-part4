@@ -4,6 +4,7 @@ import Students from './components/students/students';
 import Button from './components/ui/button/button';
 import NewStudent from './components/students/student/newStudent/newStudents';
 import Toolbar from './containers/header/toolbar/toolbar';
+import SideDrawer from './containers/header/sideDrawer/sideDrawer';
 
 function App() {
     const [studentsState, setStudents] = useState([
@@ -86,6 +87,7 @@ function App() {
     };
     return (
         <div className='App'>
+            <SideDrawer />
             <Toolbar />
             <NewStudent
                 studentName={studentName}

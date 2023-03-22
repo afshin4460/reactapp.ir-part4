@@ -1,4 +1,4 @@
-.toolbar {
+.toolbar .largSize {
     height: 50px;
     width: 100%;
     background-color: #fff;
@@ -16,4 +16,21 @@
 }
 .toolbar nav {
     height: 100%;
+}
+
+.toolbar .icon {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media(min-width: 600px) {
+    .toolbar .icon {
+        display: none;
+    }
+}
+
+@media(max-width: 599px) {
+    .toolbar .largSize {
+        display: none;
+    }
 }

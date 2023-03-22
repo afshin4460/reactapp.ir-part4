@@ -18,12 +18,15 @@ function Toolbar() {
 
     return (
         <header className="toolbar">
-            <Logo />
-            <nav>
-                <MenuItems />
-            </nav>
-            <Button btnType='violet' clicked={handleModal}>ورود یا ثبت نام</Button>
-            <Modal show={showModal} modalClosed={handleModalClosed}><SignIn /></Modal>
+            <div className='icon'>Icon</div>
+            <div className="largSize">
+                <Logo />
+                <nav>
+                    <MenuItems />
+                </nav>
+                <Button btnType='violet' clicked={handleModal}>ورود یا ثبت نام</Button>
+                <Modal show={showModal} modalClosed={handleModalClosed}><SignIn /></Modal>
+            </div>
         </header>
     );
 }
