@@ -1,4 +1,4 @@
-.toolbar .largSize {
+.toolbar .showNav, .toolbar .icon {
     height: 50px;
     width: 100%;
     background-color: #fff;
@@ -13,6 +13,7 @@
     direction: rtl;
     padding: 0 20px;
     box-sizing: border-box;
+    transition: all .5s ease-out;
 }
 .toolbar nav {
     height: 100%;
@@ -30,7 +31,7 @@
 }
 
 @media(max-width: 599px) {
-    .toolbar .largSize {
+    .toolbar .showNav {
         display: none;
     }
 }

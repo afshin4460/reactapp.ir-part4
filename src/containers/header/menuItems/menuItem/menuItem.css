@@ -22,3 +22,18 @@
     cursor: pointer;
     color: blueviolet;
 }
+
+@media(max-width: 599px) {
+
+    .menuItem {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menuItem a {
+        width: 100%;
+        padding-right: 0;
+    }
+}

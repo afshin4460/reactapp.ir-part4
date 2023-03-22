@@ -19,14 +19,14 @@ function Toolbar() {
     return (
         <header className="toolbar">
             <div className='icon'>Icon</div>
-            <div className="largSize">
-                <Logo />
+            <div className="showNav">
+                <Logo height='80%' />
                 <nav>
                     <MenuItems />
                 </nav>
                 <Button btnType='violet' clicked={handleModal}>ورود یا ثبت نام</Button>
-                <Modal show={showModal} modalClosed={handleModalClosed}><SignIn /></Modal>
             </div>
+            <Modal show={showModal} modalClosed={handleModalClosed}><SignIn /></Modal>
         </header>
     );
 }

@@ -7,11 +7,13 @@ import './sideDrawer.css';
 function SideDrawer() {
     return (
         <div className="sideDrawer">
-            <Logo />
+            <Logo height='10%' />
             <nav>
                 <MenuItems />
             </nav>
-            <Button>ورود یا ثبت نام</Button>
+            <div className="boxButton">
+                <Button btnType='violet'>ورود یا ثبت نام</Button>
+            </div>
         </div>
     );
 }
